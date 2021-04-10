@@ -21,4 +21,8 @@ class Customer
     Meal.all.select {|m| m.customer == self}
   end
 
+  def waiters
+    meals.map {|m| m.waiter}
+  end
+
 end
